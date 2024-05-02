@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .email-button {
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -134,7 +134,7 @@ nav ul li a:hover {
 }
 
 .call-button { 
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
