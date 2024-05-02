@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .contact-button {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #007bff;
