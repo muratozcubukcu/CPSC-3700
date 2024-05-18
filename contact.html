@@ -3,6 +3,7 @@
 <head>
     <title>Contact - Phone Selling Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="contact.css">
 </head>
 <body>
     <nav>
@@ -16,49 +17,18 @@
     <h1>Contact Us</h1>
     <br>
     <br>
-    <style>
-        /* Inline CSS styling for the review box */
-        .review-box {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .review-box textarea {
-            width: 97.7%;
-            height: 100px;
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            resize: none; 
-            /* Prevents text area from being resizable */
-        }
-        /*Inline review box styling. */
-        .review-box button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
     </head>
     <body>
     
     <div class="review-box">
         <h2>Drop a Review!</h2>
         <p>Share your experience with our product:</p>
-        <textarea placeholder="Write your review here..."></textarea>
-        <button>Submit Review</button>
+        <form id="reviewForm">
+            <textarea id="review" placeholder="Write your review here..."></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="contactForm.js"></script>
 </body>
 </html>
