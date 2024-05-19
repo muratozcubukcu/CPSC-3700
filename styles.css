@@ -1,6 +1,3 @@
-
-
-
   html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -131,4 +128,20 @@ nav ul li a:hover {
 
 .contact-button:hover {
   background-color: #0056b3;
+}
+
+/* Specific Styles for Pixel 8 Pro */
+.product img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid black; /* Adjust border properties as needed */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+.highlight {
+    font-weight: bold;
+    color: #005eff; /* You can choose any color you prefer */
 }
