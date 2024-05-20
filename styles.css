@@ -70,6 +70,15 @@ h2 {
 .product-card:nth-child(3) {
     background-image: url('img/Pixel/Pixel.webp');
 }
+.product-card:nth-child(4) {
+    background-image: url('img/huwei/Huawei-Pura-70-Ultra-image-71-1420x799.webp');
+}
+.product-card:nth-child(5) {
+    background-image: url('img/Xiaomi/pc-14ultra-header.webp');
+}
+.product-card:nth-child(6) {
+    background-image: url('img/OnePlus/li-oneplus-12-hero.avif');
+}
 
 
 .product-card:hover {
