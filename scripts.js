@@ -1,10 +1,10 @@
 var products = [
-    { name: 'iPhone 13 Pro', price: 500, link: 'Phone1.html' },
-    { name: 'Samsung Galaxy S21 Ultra', price: 600, link: 'Phone2.html' },
+    { name: 'iPhone 13 Pro', price: 500, link: 'phone1.html' },
+    { name: 'Samsung Galaxy S21 Ultra', price: 600, link: 'phone2.html' },
     { name: 'Pixel 8 Pro', price: 700, link: 'Phone3.html' },
-    { name: 'HUAWEI Pura 70 Ultra', price: 800, link: 'Phone4.html' },
-    { name: 'Xiaomi Mi 14 Ultra', price: 900, link: 'Phone5.html' },
-    { name: 'OnePlus 10 Pro', price: 1000, link: 'Phone6.html' },
+    { name: 'HUAWEI Pura 70 Ultra', price: 800, link: 'phone4.html' },
+    { name: 'Xiaomi Mi 14 Ultra', price: 900, link: 'phone5.html' },
+    { name: 'OnePlus 10 Pro', price: 1000, link: 'phone6.html' },
 ];
 
 var productsContainer = document.getElementById('products');
