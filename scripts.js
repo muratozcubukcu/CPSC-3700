@@ -1,7 +1,7 @@
 var products = [
-    { name: 'Phone 1', price: 500 },
-    { name: 'Phone 2', price: 600 },
-    { name: 'Phone 3', price: 700 },
+    { name: 'iPhone 13 Pro', price: 500, link: 'Phone1.html' },
+    { name: 'Samsung Galaxy S21 Ultra', price: 600, link: 'Phone2.html' },
+    { name: 'Pixel 8 Pro', price: 700, link: 'Phone3.html' },
 ];
 
 var productsContainer = document.getElementById('products');
@@ -21,9 +21,10 @@ products.forEach(function(product) {
     var buyButton = document.createElement('button');
     buyButton.textContent = 'Buy Now';
     buyButton.addEventListener('click', function() {
-        alert('You have bought ' + product.name);
+        window.location.href = product.link;
     });
     productCard.appendChild(buyButton);
 
     productsContainer.appendChild(productCard);
 });
+

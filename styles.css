@@ -1,13 +1,11 @@
-  html {
+html {
+    position: relative;
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  }
-  
-  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-    display: block;
-  }
+}
+
   
   body {
     margin: 0;
@@ -17,10 +15,28 @@
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    min-height: 100vh;
+    position: relative;
   }
 
+  body::before {
+    content: "";
+    background-image: url('https://danielsbroiler.com/cdn/shop/t/2/assets/swirl.svg');
+    opacity: 0.3; /* Adjust this value to change the opacity of the background */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
     text-align: center;
     padding: 20px 0;
 }
@@ -33,7 +49,6 @@ h1 {
 }
 
 .product-card {
-    background-image: url('img/iphone.jpg');
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -45,6 +60,17 @@ h1 {
     align-items: center;
     transition: all 0.3s ease;
 }
+
+.product-card:nth-child(1) {
+    background-image: url('img/Iphone/Iphone.jpg');
+}
+.product-card:nth-child(2) {
+    background-image: url('img/Samsung/Samsung.avif');
+}
+.product-card:nth-child(3) {
+    background-image: url('img/Pixel/Pixel.webp');
+}
+
 
 .product-card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -81,35 +107,21 @@ h1 {
 }
 
 nav {
-    background-color: #333;
-    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add the missing box-shadow property value */
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
+    justify-content: center;
 }
 
-nav ul {
+ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    margin-left: 850px;
 }
 
-nav ul li {
+li {
     margin: 0 10px;
 }
 
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
 
 .contact-button {
   display: inline-block;
@@ -130,18 +142,185 @@ nav ul li a:hover {
   background-color: #0056b3;
 }
 
-/* Specific Styles for Pixel 8 Pro */
-.product img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border: 2px solid black; /* Adjust border properties as needed */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+
+a {
+    display: block;
+    color: #000000;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
 }
 
-.highlight {
-    font-weight: bold;
-    color: #005eff; /* You can choose any color you prefer */
+a.bttn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: inherit;
 }
+
+a:not(.bttn):hover {
+    color: #333;
+}
+
+a:not(.bttn):before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+a:not(.bttn):hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.carousel-wrapper {
+    display: flex; /* Aligns children (carousels) horizontally */
+    justify-content: space-between; /* Optional: Adds some space between the carousels */
+    width: 20%;
+    margin: auto;
+}
+
+.carousel {
+    width: 10%;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    flex: 1;
+    padding-top: 45px;
+}
+
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 200%;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.featured-products {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.about-us {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+}
+.contact-info p {
+    margin: 5px 0;
+}
+
+
+h5 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center !important;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 500px;
+    /* border: 5px solid #398fff; */
+
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+
+.spec {
+    background-color: #fff;
+    border: 1px solid #000000;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.carousel2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+    position: relative;
+  }
