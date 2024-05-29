@@ -333,3 +333,39 @@ h5 {
     opacity: 1;
     position: relative;
   }
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+}
