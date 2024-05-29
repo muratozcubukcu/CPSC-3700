@@ -333,3 +333,40 @@ h5 {
     opacity: 1;
     position: relative;
   }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-content p {
+    margin: 10px 0;
+}
+
+footer .footer-content .socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-content .socials li {
+    margin: 0 10px;
+}
+
+footer .footer-content .socials li a img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
