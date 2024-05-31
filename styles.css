@@ -354,57 +354,6 @@ h5 {
     position: relative;
   }
 
-  /* Hero Section styling */
-.hero-section {
-    background-image: url('https://m-cdn.phonearena.com/images/article/64576-wide-two_1200/The-Best-Phones-to-buy-in-2024---our-top-10-list.webp?1716206294'); /* Replace with your hero background image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 3rem; /* Larger font size for main heading */
-    margin: 0 0 20px;
-}
-
-.hero-content p {
-    font-size: 1.5rem; /* Larger font size for subheading */
-    margin: 0 0 20px;
-}
-
-.cta-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
 /* Footer styling */
 footer {
     background-color: #333;
@@ -439,25 +388,4 @@ footer {
 .socials img {
     width: 30px;
     height: 30px;
-}
-
-/* Hover effect */
-.contact-info:hover {
-    background-color: #f0f0f0; /* Change background color on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-.product-button {
-    background-color: #007bff;
-    color: white;
-    width: 150px; /* Adjust the width to make the square smaller */
-    height: 30px; /* Adjust the height to make the square smaller */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-    margin-left: 0; 
-    margin-top: 10px; 
-    margin-bottom: 10px; 
 }
