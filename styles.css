@@ -9,7 +9,8 @@ html {
   
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Segoe UI";
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -132,6 +133,9 @@ li {
 }
 
 
+
+
+
 .contact-button {
   display: inline-block;
   padding: 10px 20px;
@@ -163,24 +167,7 @@ a {
     position: relative;
 }
 
-a.bttn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    font-weight: inherit;
-}
-
-a:not(.bttn):hover {
-    color: #333;
-}
-
-a:not(.bttn):before {
+a.navbttn:before {
     content: "";
     position: absolute;
     display: block;
@@ -194,10 +181,13 @@ a:not(.bttn):before {
     transition: transform 0.3s ease;
 }
 
-a:not(.bttn):hover::before {
-    transform: scaleX(1);
+a.navbttn:hover {
+    color: #333;
 }
 
+a.navbttn:hover::before {
+    transform: scaleX(1);
+}
 
 
 .carousel-wrapper {
@@ -236,6 +226,7 @@ a:not(.bttn):hover::before {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+
 }
 .header {
     background-color: #333;
@@ -247,41 +238,26 @@ a:not(.bttn):hover::before {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 30px;
+    
+    
 }
 .product {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid black
+        border: 1px solid #ddd;
 }
 .about-us {
-    background-color: white; /* Light background color */
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-
-.about-us h2 {
-    color: #333; /* Darker text color for headings */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-us p {
-    color: #555; /* Slightly darker text color for paragraphs */
-    line-height: 1.6; /* Improved readability with slightly increased line height */
-    margin-bottom: 10px;
-}
-
-.contact-info {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 30px;
-    border-radius: 10px;
-    border: 2px solid black
-
+    border: solid 1px #000000;
+}
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border: solid 1px #000000;
 }
 .contact-info p {
     margin: 5px 0;
@@ -345,14 +321,88 @@ h5 {
   .carousel-item {
     position: absolute;
     width: 100%;
-    opacity: 0;
-    transition: opacity 1s;
   }
   
   .carousel-item.active {
-    opacity: 1;
     position: relative;
   }
+
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
+  }
+  
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .carousel-item {
+    animation: slideIn 1s ease-out;
+  }
+
+
+    /* Hero Section styling */
+.hero-section {
+    background-image: url('https://m-cdn.phonearena.com/images/article/64576-wide-two_1200/The-Best-Phones-to-buy-in-2024---our-top-10-list.webp?1716206294'); /* Replace with your hero background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Larger font size for main heading */
+    margin: 0 0 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Larger font size for subheading */
+    margin: 0 0 20px;
+}
+
+.cta-button {
+    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    width: 10%;
+}
+.cta-button:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    text-decoration: none;
+}
 
 /* Footer styling */
 footer {
@@ -388,4 +438,30 @@ footer {
 .socials img {
     width: 30px;
     height: 30px;
+}
+
+/* Hover effect */
+.contact-info:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.product-button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 150px; /* Adjust the width to make the square smaller */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin-left: 0; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.product-button:hover {
+    background-color: #3a3a3a;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }

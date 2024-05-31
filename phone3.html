@@ -2,18 +2,11 @@
 <html>
 <head>
     <title>Pixel 8 Pro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phones.html">Phones</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="myCart.html">myCart</a></li>
-        </ul>
-    </nav>
 
 
     <div class="banner">
@@ -22,17 +15,48 @@
         </video>
     </div>
 
-    <div class="carousel">
-      <div class="carousel-container">
-          <img src="img/Pixel/mint.png" alt="iPhone 13 Pro Image 1">
-          <img src="img/Pixel/blue.png" alt="iPhone 13 Pro Image 2">
-          <img src="img/Pixel/obsidian.png" alt="iPhone 13 Pro Image 3">
-          <img src="img/Pixel/cream.png" alt="iPhone 13 Pro Image 4">
-      </div>
-  </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/Pixel/mint.png" alt="Pixel Image 1">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/Pixel/blue.png" alt="Pixel Image 2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/Pixel/obsidian.png" alt="Pixel Image 3">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/Pixel/cream.png" alt="Pixel Image 4">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <button id="addItem" class="btn btn-primary" data-name="Pixel 8 Pro" data-price="700" data-quantity="1">Add to Cart</button>
+            </div>
+        </div>
+    </div>
 
   <h2>Specifications</h2>
   <dl class ="spec">
+      <h2>Price: $799</h2>
       <h5>CPU: Google Tensor G2</h5>
       <h5>GPU: Mali-G710 MP7</h5>
       <h5>RAM: 12 GB</h5>
@@ -45,6 +69,11 @@
       <h5>Screen Protection: Corning Gorilla Glass Victus 2</h5>
   </dl>
 
-    <script src="img.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="img.js"></script>
+  <script src="nav.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>

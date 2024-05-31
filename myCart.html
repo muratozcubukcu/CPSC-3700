@@ -1,67 +1,51 @@
-<!--My cart page for site.-->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phone Selling Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="cart.css">
+   <title>Phone Selling Website</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <link rel="stylesheet" type="text/css" href="cart.css">
+   <style>
+      .custom-container {
+         background-color: white;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         padding: 20px;
+      }
+   </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phones.html">Phones</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="myCart.html">myCart</a></li>
-        </ul>
-    </nav>
-    <h1>Welcome to our site!</h1>
-    
-    <h2>Not fully implemented yet.</h2>
 
-    <div class="cart-item">
-        <header>Contents: </header>
-        <p>Cart contains the SamSung Galaxy S4</p>
+   <h1>Cart</h1>
+
+   <div class="container custom-container">
+     <h1>Shopping Cart</h1>
+     <div class="row">
      </div>
-
-     <div class="cart-item">
-        <div class="cart-header">
-           <h4>Product Name:</h4>
-        </div>
-        <p>SamSung Galaxy S4</p>
-     </div>
-
-     <div class="cart-item">
-        <p>Description:</p>
-        <div class="product-details">
-           <p>The SamSung galaxy S4 has high resolution and ultra fast processing for smooth quality phone usage.</p>
+     <div class="row mt-4">
+        <div class="col-md-6 offset-md-3 text-center">
+           <h2>Cart Items</h2>
+           <table class="table">
+              <thead>
+                 <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                 </tr>
+              </thead>
+              <tbody id="cartTableBody">
+                 <!-- Cart items will be dynamically added here -->
+              </tbody>
+           </table>
+           <button id="clearCart" class="btn btn-danger">Clear Cart</button>
         </div>
      </div>
+  </div>
 
-     <div class="cart-item">
-        <div class="counter">
-           <button>-</button> <br>
-           <p> Quantity: </p>
-           <span>1</span>
-           <br> <button>+</button>
-        </div>
-     </div>
-
-   <div class="cart-item">
-      <div class="price-section">
-         <p>Price (USD $):</p>
-         <p>SubTotal: $1499.99</p>
-      </div>
-   </div>
-
-
-   <div class="checkout-section">
-      <p>Total: $1499.99</p> 
-      <button>Check out</button>
-   </div>
-
-
-
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="nav.js"></script>
+   <script src="cart.js"></script>
 </body>
 </html>
