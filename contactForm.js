@@ -14,5 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please write a review before submitting.');
             review.focus();
         }
+        else {
+            alert('Thank you for your feedback!');
+        }
     });
 });
